@@ -3,8 +3,24 @@
  */
 package message.queues;
 
+import com.amazonaws.services.sqs.AmazonSQS;
+import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
+import com.amazonaws.services.sqs.model.AmazonSQSException;
+import com.amazonaws.services.sqs.model.CreateQueueRequest;
+
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+    public void createQueueAWS(String QUEUE_NAME) {
+        AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+        CreateQueueRequest create_request = new CreateQueueRequest(QUEUE_NAME)
+                .addAttributesEntry("DelaySeconds", "60")
+                .addAttributesEntry("MessageRetentionPeriod", "86400");
+
+        try {
+            sqs.createQueue(create_request);
+        } catch (AmazonSQSException e) {
+            if (!e.getErrorCode().equals("QueueAlreadyExists")) {
+                throw e;
+            }
+        }
     }
 }
