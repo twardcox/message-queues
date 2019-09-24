@@ -37,3 +37,4 @@
 - Nick Paro
 - Melfi Perez
 - Padmapriva Ganapathi
+- https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/examples-sqs-message-queues.html
