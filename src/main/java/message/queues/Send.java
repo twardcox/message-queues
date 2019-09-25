@@ -29,7 +29,7 @@ public class Send {
 
         SendMessageRequest send_msg_request = new SendMessageRequest()
                 .withQueueUrl(queueUrl)
-                .withMessageBody("hello world")
+                .withMessageBody("Long live the Emperor! ")
                 .withDelaySeconds(5);
         sqs.sendMessage(send_msg_request);
 
@@ -39,9 +39,9 @@ public class Send {
                 .withQueueUrl(queueUrl)
                 .withEntries(
                         new SendMessageBatchRequestEntry(
-                                "msg_1", "Hello from message 1"),
+                                "msg_1", "Hello from Hades"),
                         new SendMessageBatchRequestEntry(
-                                "msg_2", "Hello from message 2")
+                                "msg_2", "Hello from Gallapagos")
                                 .withDelaySeconds(10));
         sqs.sendMessageBatch(send_batch_request);
 
