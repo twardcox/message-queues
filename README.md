@@ -1,9 +1,12 @@
 # Message Queues on AWS + SQS Trigger with a Lambda Queue
-- Author: Jack Daniel Kinne.
+- Author: Travis Cox
 - Challenge by: Codefellows.
 <!-- Short summary or background information -->
 - create 3 message queues on amazon's AWS service.
 - create a SQS trigger, tied to lambda function.
+
+## Special Consideration
+Thanks to my paired programming partner Jack Kinne who worked through his code with me to complete this project. My laptop ate gradle somehow and is not loading, running, or cooperating in any meaningful way keeping me from completing these tasks without outside assistance. Thank you for your understanding.
 
 ## to implement
 - clone and download repo
@@ -51,7 +54,7 @@
 - Joachen Busch
 - Brandon Hurrington
 - Renee Messick
-- Travis Cox
+- Jack Kinne
 - Jack Kinne
 - Marisha Hoza
 - Chris Coulon
